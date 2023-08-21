@@ -71,6 +71,7 @@ async function onFormSubmit(event) {
 
   if (data && data.hits.length > 0) {
     displayImages(data.hits);
+
     Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`);
     lightbox.refresh();
     if (data.totalHits <= currentPage * perPage) {
